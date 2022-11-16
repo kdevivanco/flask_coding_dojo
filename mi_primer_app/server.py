@@ -21,6 +21,10 @@ def ejemplo_3(some_int,word):
     return texto
 
 
+@app.errorhandler(404)
+def error(e):
+    return('<h3>Esta ruta no existe</h3>')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
